@@ -22,8 +22,8 @@ ARCHITECTURE behavior OF cpu_top IS
             dr : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
             dw : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
             addr : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-            pc_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-            accu_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+            pc_out : BUFFER STD_LOGIC_VECTOR(7 DOWNTO 0);
+            accu_out : BUFFER STD_LOGIC_VECTOR(7 DOWNTO 0);
             seg : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
             an : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
             led : OUT STD_LOGIC
@@ -108,4 +108,3 @@ BEGIN
 END PROCESS display_controller;
 
 END behavior;
-
