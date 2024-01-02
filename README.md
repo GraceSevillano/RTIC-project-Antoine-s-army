@@ -9,8 +9,14 @@ This project involves creating a basic microprocessor on an FPGA platform, speci
 - **disp4.vhd**: Manages the Nexys4DDR board's 7-segment display.
 - **procram.vhd**: Simulates RAM for data storage and retrieval.
 
+## Functionality
+![Alt text for the image](GraceSevillano/RTIC-project-Antoine-s-army/images/schematic_first_second_implementation.png "Schematic")
+
+
 ### Functionality
 Executes basic operations like load, store, add, and jump based on opcodes.
+
+
 
 ### Clocks
 Uses a debounced clock for inputs and a divided clock for display operations.
