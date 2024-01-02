@@ -4,7 +4,7 @@
 This project involves creating a basic microprocessor on an FPGA platform, specifically the Nexys4DDR board.
 
 
-<img src="images/board_real.jpeg" width="100" height="auto"/>
+<img src="images/board_real.jpeg" width="400" height="auto"/>
 
 
 ### Components
