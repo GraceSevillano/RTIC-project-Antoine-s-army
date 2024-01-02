@@ -39,4 +39,4 @@ Each VHDL file contains comments for a better understanding of the system.
 
 
  
-Details are in our report RTIC_project (1).pdf
+Details are in our report RTIC_project.pdf
