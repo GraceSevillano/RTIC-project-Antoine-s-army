@@ -10,7 +10,7 @@ This project involves creating a basic microprocessor on an FPGA platform, speci
 - **procram.vhd**: Simulates RAM for data storage and retrieval.
 
 
-!(images/schematic_first_second_implementation.png "Schematic")
+![Schematic Diagram](/RTIC-project-Antoine-s-army/images/schematic_first_second_implementation.png)
 
 
 ### Functionality
