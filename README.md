@@ -3,7 +3,9 @@
 ## Project Overview
 This project involves creating a basic microprocessor on an FPGA platform, specifically the Nexys4DDR board.
 
-![Real board](images/board_real.jpeg)
+
+<img src="images/board_real.jpeg" width="100" height="auto"/>
+
 
 ### Components
 - **cpu_top.vhd**: Top-level entity integrating the CPU, RAM, and display modules.
