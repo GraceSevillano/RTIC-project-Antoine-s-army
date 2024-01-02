@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"cfg_tb_cpu_top_func_impl.vhd" \
+"../../../../../../Desktop/a/cpu_tb.vhdl" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,108 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Tue Jan  2 09:57:33 2024
+| Host         : DESKTOP-A37P5SP running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file cpu_top_control_sets_placed.rpt
+| Design       : cpu_top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    30 |
+|    Minimum number of control sets                        |    30 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    36 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    30 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |    21 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               3 |            3 |
+| No           | No                    | Yes                    |               7 |            3 |
+| No           | Yes                   | No                     |              96 |           24 |
+| Yes          | No                    | No                     |              13 |            4 |
+| Yes          | No                    | Yes                    |             161 |           53 |
+| Yes          | Yes                   | No                     |              36 |           12 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------+------------------------------------------------+----------------------------------+------------------+----------------+--------------+
+|           Clock Signal          |                  Enable Signal                 |         Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------------+------------------------------------------------+----------------------------------+------------------+----------------+--------------+
+|  clk_btn_debounced_reg_n_0_BUFG |                                                |                                  |                1 |              1 |         1.00 |
+|  clk100MHz_IBUF_BUFG            |                                                |                                  |                2 |              2 |         1.00 |
+|  clk_btn_debounced_reg_n_0_BUFG | mem_inst/DO[3]_i_1_n_0                         |                                  |                1 |              4 |         4.00 |
+|  clk_btn_debounced_reg_n_0_BUFG | mem_inst/DO[3]_i_1_n_0                         | cpu_inst/addr_reg[4]_0           |                4 |              4 |         1.00 |
+|  clk_btn_debounced_reg_n_0_BUFG |                                                | reset_IBUF                       |                3 |              7 |         2.33 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/accu[7]_i_1_n_0                       | reset_IBUF                       |                3 |              8 |         2.67 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/pc[7]_i_1_n_0                         | reset_IBUF                       |                4 |              8 |         2.00 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/addr_reg[0]_3[0]                      | reset_IBUF                       |                1 |              8 |         8.00 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/addr_reg[0]_4[0]                      | reset_IBUF                       |                3 |              8 |         2.67 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/addr_reg[1]_2[0]                      | reset_IBUF                       |                2 |              8 |         4.00 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/addr_reg[0]_1[0]                      | reset_IBUF                       |                2 |              8 |         4.00 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/addr_reg[0]_7[0]                      | reset_IBUF                       |                3 |              8 |         2.67 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/addr_reg[1]_1[0]                      | reset_IBUF                       |                4 |              8 |         2.00 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/addr_reg[3]_1[0]                      | reset_IBUF                       |                4 |              8 |         2.00 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/addr_reg[3]_2[0]                      | reset_IBUF                       |                2 |              8 |         4.00 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/addr_reg[3]_4[0]                      | reset_IBUF                       |                1 |              8 |         8.00 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/Q[0]                                  | reset_IBUF                       |                4 |              8 |         2.00 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/addr_reg[0]_6[0]                      | reset_IBUF                       |                3 |              8 |         2.67 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/addr_reg[3]_3[0]                      | reset_IBUF                       |                2 |              8 |         4.00 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/addr_reg[0]_0[0]                      | reset_IBUF                       |                3 |              8 |         2.67 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/addr_reg[1]_0[0]                      | reset_IBUF                       |                2 |              8 |         4.00 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/addr_reg[0]_5[0]                      | reset_IBUF                       |                1 |              8 |         8.00 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/addr_reg[0]_2[0]                      | reset_IBUF                       |                2 |              8 |         4.00 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/E[0]                                  | reset_IBUF                       |                2 |              8 |         4.00 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/FSM_onehot_fsm_proc.state_reg_n_0_[2] | reset_IBUF                       |                5 |              9 |         1.80 |
+|  clk_btn_debounced_reg_n_0_BUFG | cpu_inst/temp_result0                          |                                  |                3 |              9 |         3.00 |
+|  clk100MHz_IBUF_BUFG            |                                                | debounce_proc.counter[0]_i_1_n_0 |                8 |             32 |         4.00 |
+|  clk100MHz_IBUF_BUFG            |                                                | clear                            |                8 |             32 |         4.00 |
+|  clk__0_BUFG                    |                                                | display/counter0_carry__2_n_0    |                8 |             32 |         4.00 |
+|  clk__0_BUFG                    | display/counter0_carry__2_n_0                  | display/place                    |                8 |             32 |         4.00 |
++---------------------------------+------------------------------------------------+----------------------------------+------------------+----------------+--------------+
+
+
